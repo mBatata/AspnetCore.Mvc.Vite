@@ -1,7 +1,12 @@
+using AspNetCore.Mvc.Vite.Services.Vite;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Vite
+builder.Services.AddSingleton<IViteManifest, ViteManifest>();
 
 var app = builder.Build();
 

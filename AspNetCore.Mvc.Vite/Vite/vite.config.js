@@ -67,7 +67,7 @@ function modifyManifestKeys() {
 
                     // Remove "../wwwroot" from the key
                     if (manifest.hasOwnProperty(key)) {
-                        const updatedKey = key.replace(/^(\.\.\/wwwroot)/, '');
+                        const updatedKey = key.replace(/^(\.\.\/wwwroot)\//, '');
                         updatedManifest[updatedKey] = manifest[key];
                     }
                 }
