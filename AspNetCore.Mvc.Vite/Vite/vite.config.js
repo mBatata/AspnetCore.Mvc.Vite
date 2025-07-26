@@ -10,8 +10,6 @@ function fixPartialFilePath(filePath) {
 }
 
 function getAllFiles(dir, fileList = []) {
-
-    console.log(dir)
     // If directory doesn't exist, return empty array
     if (!fs.existsSync(dir)) {
         return [];
